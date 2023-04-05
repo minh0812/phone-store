@@ -15,7 +15,7 @@ const Products = () => {
 
   useEffect(() => {
     // get data from firebase
-    const starCountRef = ref(database, "products");
+    const starCountRef = ref(database, "product-list");
     get(starCountRef).then((snapshot) => {
       if (snapshot.exists()) {
         setProductsData(snapshot.val());
